@@ -70,7 +70,7 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 	  }
 	 
 	 
-	/* @Test(priority=1)
+	 @Test(priority=1)
 	  public void VerifyIsAbleToEditNewlyAddedCarousel() throws InterruptedException{ 
 
 		  mc=new ManageCarousel(driver); 
@@ -102,7 +102,7 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 	  }
 	 
 	 
-	 @Test(priority=2)
+	/* @Test(priority=2)
 	  public void VerifyIsAbleToDeleteItemsFromAddedEditedCarousel() throws InterruptedException{ 
 
 		  mc=new ManageCarousel(driver); 
