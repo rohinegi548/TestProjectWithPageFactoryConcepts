@@ -70,7 +70,7 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 	  }
 	 
 	 
-	 @Test(priority=1)
+	/* @Test(priority=1)
 	  public void VerifyIsAbleToEditNewlyAddedCarousel() throws InterruptedException{ 
 
 		  mc=new ManageCarousel(driver); 
@@ -134,7 +134,7 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 		  System.out.println("Earlier added item to Edited Carousel: "+PropertyUtil.getProperty("test_carousel").concat("New")
 		  		+ " has been deleted successfully by clicking DeleteCheckBox, Passing Test!"); 
 		 
-	  }
+	  }*/
 	
 	
  
