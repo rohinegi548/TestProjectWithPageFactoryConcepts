@@ -47,7 +47,7 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 	
 	
 	
-	 @Test(priority=0)
+	/* @Test(priority=0)
 	  public void VerifyAbleToAddNewCarouselInTheSystem() throws InterruptedException, IOException{ 
 		  
 		  mc=new ManageCarousel(driver);
@@ -67,7 +67,7 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 		  System.out.println("New Carousel: "+PropertyUtil.getProperty("test_carousel")
 		  		+ " has been added into the system successfully, Passing Test!"); 
 		 
-	  }
+	  }*/
 	 
 	 
 	 @Test(priority=1)
