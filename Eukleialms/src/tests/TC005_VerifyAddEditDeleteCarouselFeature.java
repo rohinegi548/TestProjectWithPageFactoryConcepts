@@ -48,7 +48,7 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 	
 	@Test
 	public void testdata(){
-		Assert.Assert.assertEquals("hello", "hello");
+		Assert.assertEquals("hello", "hello");
 	}
 	/* @Test(priority=0)
 	  public void VerifyAbleToAddNewCarouselInTheSystem() throws InterruptedException, IOException{ 
