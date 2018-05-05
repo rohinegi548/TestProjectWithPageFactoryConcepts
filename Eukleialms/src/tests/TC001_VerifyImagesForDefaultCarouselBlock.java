@@ -32,7 +32,8 @@ public class TC001_VerifyImagesForDefaultCarouselBlock {
 		  
 		    System.out.println("Executing: "+method.getName());
 		    driver=GetDriver.init(PropertyUtil.getProperty("browser"), PropertyUtil.getProperty("url"));
-		    
+		    login=new Login(driver);
+		    login.loginToApplication(PropertyUtil.getProperty("username"), PropertyUtil.getProperty("password"));
 	  }
 	
 	
@@ -40,8 +41,6 @@ public class TC001_VerifyImagesForDefaultCarouselBlock {
 	 @Test
 	  public void VerifyAllCarouselImagesAreVisibleForDefaultCarousel() throws InterruptedException{ 
 		  
-		  login=new Login(driver);
-		  login.loginToApplication(PropertyUtil.getProperty("username"), PropertyUtil.getProperty("password"));
 		  home=new Home(driver);
 		  Assert.assertEquals("Home", home.getHomeLinkText(), "Login unsuccessfull");
 		  System.out.println("Login Successfull"); 
