@@ -101,7 +101,7 @@ public class AddEditCarousel {
 		public void clickOnNewItemToggleGenratedAfterClkAddItem(){
 			
 			newItemAfterClkAddItem.click();
-			//WaitUtil.waitForElement(driver, 30, addAttachment);
+			WaitUtil.waitForElementToBeClickable(driver, 30, addAttachment);
 		}
 		
 		
