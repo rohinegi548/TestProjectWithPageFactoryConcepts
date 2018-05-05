@@ -33,7 +33,7 @@ public class AddEditCarousel {
 		WebElement addItemToggleBtn;
 		
 		//for specific to editing existing carousel
-		@FindBy(xpath="//legend[@class='ftoggler']/a[text()='New item']")
+		@FindBy(xpath="//legend//a[contains(text(),'New item')]")
 		WebElement newItemAfterClkAddItem;
 		
 		@FindBy(xpath="//div[@class='fp-btn-add']/a")
@@ -95,13 +95,24 @@ public class AddEditCarousel {
 		public void clickOnAddItemButton(){
 			
 			addItemToggleBtn.click();
+			
+		}
+		
+		public void waitForAttachmentElmtToBeClickable(){
+			
 			WaitUtil.waitForElementToBeClickable(driver, 30, addAttachment);
+		}
+		
+		public void newItemAfterClkAddItemElmtToBeClickable(){
+			
+			WaitUtil.waitForElementToBeClickable(driver, 30, newItemAfterClkAddItem);
 		}
 		
 		public void clickOnNewItemToggleGenratedAfterClkAddItem(){
 			
+			newItemAfterClkAddItemElmtToBeClickable();
 			newItemAfterClkAddItem.click();
-			WaitUtil.waitForElementToBeClickable(driver, 30, addAttachment);
+			waitForAttachmentElmtToBeClickable();
 		}
 		
 		
@@ -116,7 +127,6 @@ public class AddEditCarousel {
 			WaitUtil.simpleWait(2);
 			uploadFileBtn.click();
 			WaitUtil.waitForElementToBeClickable(driver, 30, saveChangesBtn);
-			WaitUtil.simpleWait(2);
 			
 			titleField.sendKeys(PropertyUtil.getProperty("test_title"));
 			WaitUtil.simpleWait(2);
