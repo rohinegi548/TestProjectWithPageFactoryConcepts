@@ -16,10 +16,18 @@ public class WaitUtil {
 	
 	public static WebDriver driver;
 	
-	public static void waitForElement(WebDriver driver, int seconds, WebElement elmt){
+	public static void waitForElementVisibility(WebDriver driver, int seconds, WebElement elmt){
 		
 		WebDriverWait wait=new WebDriverWait(driver, seconds);
 		wait.until(ExpectedConditions.visibilityOf(elmt));
+		
+		
+	}
+	
+	public static void waitForElementToBeClickable(WebDriver driver, int seconds, WebElement elmt){
+		
+		WebDriverWait wait=new WebDriverWait(driver, seconds);
+		wait.until(ExpectedConditions.elementToBeClickable(elmt));
 		
 		
 	}

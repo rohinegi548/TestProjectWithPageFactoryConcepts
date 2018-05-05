@@ -77,14 +77,14 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 		  driver.findElement(
 		  By.xpath("//tbody/tr/td[text()='"+PropertyUtil.getProperty("test_carousel")+"']//following-sibling::td//input[@value='Edit Carousel']"))
 		  .click();
-		  WaitUtil.waitForElement(driver, 10, driver.findElement(By.xpath("//legend//a[contains(text(),'Item')]")));
+		  WaitUtil.waitForElementVisibility(driver, 10, driver.findElement(By.xpath("//legend//a[contains(text(),'Item')]")));
 		  anc=new AddEditCarousel(driver);
 		  anc.setCarouselName(PropertyUtil.getProperty("test_carousel").concat("New"));
 		  driver.findElement(By.xpath("//legend//a[contains(text(),'Item')]")).click();
 		  WaitUtil.simpleWait(3);
 		  anc.clickOnSaveChanges();
 		  
-		  WaitUtil.waitForElement(
+		  WaitUtil.waitForElementVisibility(
 				  driver, 
 				  30, 
 				  driver.findElement(By.xpath("//tbody/tr/td[text()='"+PropertyUtil.getProperty("test_carousel").concat("New")+"']"))
@@ -109,14 +109,14 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 		  driver.findElement(
 		  By.xpath("//tbody/tr/td[text()='"+PropertyUtil.getProperty("test_carousel").concat("New")+"']//following-sibling::td//input[@value='Edit Carousel']"))
 		  .click();
-		  WaitUtil.waitForElement(driver, 10, driver.findElement(By.xpath("//legend//a[contains(text(),'Item')]")));
+		  WaitUtil.waitForElementVisibility(driver, 10, driver.findElement(By.xpath("//legend//a[contains(text(),'Item')]")));
 		  anc=new AddEditCarousel(driver);
 		  driver.findElement(By.xpath("//legend//a[contains(text(),'Item')]")).click();
 		  WaitUtil.simpleWait(3);
 		  anc.clickOnDeleteChkBox();
 		  anc.clickOnSaveChanges();
 		  
-		  WaitUtil.waitForElement(
+		  WaitUtil.waitForElementVisibility(
 				  driver, 
 				  30, 
 				  driver.findElement(By.xpath("//tbody/tr/td[text()='"+PropertyUtil.getProperty("test_carousel").concat("New")+"']"))

@@ -49,30 +49,30 @@ public class Home {
 		
 		public String getHomeLinkText(){
 			
-			WaitUtil.waitForElement(driver, 10, homelink);
+			WaitUtil.waitForElementVisibility(driver, 10, homelink);
 			return homelink.getText();
 		}
 		
 		public int IsAllCarouselImagesExists(){
 			
 			int flag=0;
-			WaitUtil.waitForElement(driver, 30, carousel_1);
+			WaitUtil.waitForElementVisibility(driver, 30, carousel_1);
 			if(carousel_1.isDisplayed()){
 				flag++;
 			}
-			WaitUtil.waitForElement(driver, 30, carousel_2);
+			WaitUtil.waitForElementVisibility(driver, 30, carousel_2);
 			if(carousel_2.isDisplayed()){
 				flag++;
 			}
-			WaitUtil.waitForElement(driver, 30, carousel_3);
+			WaitUtil.waitForElementVisibility(driver, 30, carousel_3);
 			if(carousel_3.isDisplayed()){
 				flag++;
 			}
-			WaitUtil.waitForElement(driver, 30, carousel_4);
+			WaitUtil.waitForElementVisibility(driver, 30, carousel_4);
 			if(carousel_4.isDisplayed()){
 				flag++;
 			}
-			WaitUtil.waitForElement(driver, 30, carousel_5);
+			WaitUtil.waitForElementVisibility(driver, 30, carousel_5);
 			if(carousel_5.isDisplayed()){
 				flag++;
 			}
