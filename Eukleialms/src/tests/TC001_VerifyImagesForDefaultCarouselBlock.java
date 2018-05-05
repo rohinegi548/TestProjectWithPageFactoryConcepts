@@ -34,6 +34,7 @@ public class TC001_VerifyImagesForDefaultCarouselBlock {
 		    driver=GetDriver.init(PropertyUtil.getProperty("browser"), PropertyUtil.getProperty("url"));
 		    login=new Login(driver);
 		    login.loginToApplication(PropertyUtil.getProperty("username"), PropertyUtil.getProperty("password"));
+		    WaitUtil.simpleWait(5);
 	  }
 	
 	
