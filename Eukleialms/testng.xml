@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Eukleialms">
+   <test name="Homepage Features">
+  	<classes >
+  		<class name="tests.TC001_VerifyCarouselBlockContainsAllImages"></class>
+  	</classes>
+  	</test> 
+  	<test name="Manage Carousel Features">
+  	<classes >
+  		<class name="tests.TC002_VerifyManageCarouselHavingCorrespondingElements"></class>
+  	</classes>
+  	</test>
+  	<test name="Add/Edit Carousel Page">
+  	<classes >
+  		<class name="tests.TC003_VerifyAddNewCarouselAndHavingRequiredElements"></class>
+  		<class name="tests.TC004_VerifyAddEditCarouselElements"></class>
+  	</classes>
+  	</test> 
+</suite> <!-- Suite -->
