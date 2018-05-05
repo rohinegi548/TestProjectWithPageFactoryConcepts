@@ -52,6 +52,7 @@ public class TC004_VerifyAddEditCarouselElements {
 		  mc.clickOnaddCarouselLink();
 		  anc=new AddEditCarousel(driver);
 		  anc.clickOnAddItemButton();
+		  anc.waitForAttachmentElmtToBeClickable();
 		  Assert.assertEquals(
 				   anc.isAddItemButtonExist(), true, 
 				  "Either Add Item button doesn't exist/didn't load while Adding a new carousel, Failing Test!");
