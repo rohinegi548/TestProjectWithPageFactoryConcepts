@@ -3,6 +3,7 @@
  */
 package pages;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import commonutil.PropertyUtil;
 import commonutil.WaitUtil;
 
 /**
@@ -37,22 +39,28 @@ public class AddEditCarousel {
 		@FindBy(xpath="//div[@class='fp-btn-add']/a")
 		WebElement addAttachment;
 		
-		@FindBy(xpath="//*[starts-with(@id,'id_title_new')]")
+		@FindBy(xpath="//input[@type='file']")
+		WebElement addFileInput;
+		
+		@FindBy(xpath="//button[@class='fp-upload-btn btn-primary btn']")
+		WebElement uploadFileBtn;
+		
+		@FindBy(xpath="//*[starts-with(@id,'id_title')]")
 		WebElement titleField;
 		
-		@FindBy(xpath="//*[starts-with(@id,'id_caption_new')]")
+		@FindBy(xpath="//*[starts-with(@id,'id_caption')]")
 		WebElement captionDiv;
 		
-		@FindBy(xpath="//textarea[starts-with(@id,'id_caption_new')]")
+		@FindBy(xpath="//textarea[starts-with(@id,'id_caption')]")
 		WebElement hiddenTexArea;
 		
-		@FindBy(xpath="//*[starts-with(@id,'id_buttontext_new')]")
+		@FindBy(xpath="//*[starts-with(@id,'id_buttontext')]")
 		WebElement buttonText;
 		
-		@FindBy(xpath="//*[starts-with(@id,'id_link_new')]")
+		@FindBy(xpath="//*[starts-with(@id,'id_link')]")
 		WebElement linkText;
 		
-		@FindBy(xpath="//*[starts-with(@id,'id_remove_new')]")
+		@FindBy(xpath="//*[starts-with(@id,'id_remove')]")
 		WebElement deleteChkBox;
 		
 		@FindBy(xpath="//input[contains(@value,'Save changes')]")
@@ -96,6 +104,32 @@ public class AddEditCarousel {
 			//WaitUtil.waitForElement(driver, 30, addAttachment);
 		}
 		
+		
+		public void fillDataForAddItem() throws IOException, InterruptedException {
+			
+			addAttachment.click();
+			addFileInput.click();
+			WaitUtil.simpleWait(2);
+			
+			//autoit code
+			Runtime.getRuntime().exec(PropertyUtil.getProperty("upload_file_path"));
+			WaitUtil.simpleWait(2);
+			uploadFileBtn.click();
+			WaitUtil.simpleWait(2);
+			
+			titleField.sendKeys(PropertyUtil.getProperty("test_title"));
+			WaitUtil.simpleWait(2);
+			captionDiv.sendKeys(PropertyUtil.getProperty("test_caption"));
+			WaitUtil.simpleWait(2);
+			buttonText.sendKeys(PropertyUtil.getProperty("test_button_txt"));
+			WaitUtil.simpleWait(2);
+			linkText.sendKeys(PropertyUtil.getProperty("test_link"));
+			WaitUtil.simpleWait(2);
+			
+			saveChangesBtn.click();
+			
+		}
+		
 		public boolean isElementsUnderAddItemDisplayedAndEnabled(){
 			
 			if(addAttachment.isEnabled() && titleField.isEnabled() 
@@ -110,6 +144,21 @@ public class AddEditCarousel {
 			}
 		}
 		
+		public void setCarouselName(String carouselName) {
+			
+			carouselNameField.clear();
+			carouselNameField.sendKeys(carouselName);
+		}
+		
+		public void clickOnDeleteChkBox() {
+			
+			deleteChkBox.click();
+		}
+		
+		public void clickOnSaveChanges() {
+			
+			saveChangesBtn.click();
+		}
 		
 		public boolean isSaveChangesButtonExist() {
 			

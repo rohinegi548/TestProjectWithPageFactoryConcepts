@@ -15,6 +15,7 @@
   	<classes >
   		<class name="tests.TC003_VerifyAddNewCarouselAndHavingRequiredElements"></class>
   		<class name="tests.TC004_VerifyAddEditCarouselElements"></class>
+  		<class name="tests.TC005_VerifyAddEditDeleteCarouselFeature"></class>
   	</classes>
   	</test> 
 </suite> <!-- Suite -->
