@@ -115,6 +115,7 @@ public class AddEditCarousel {
 			Runtime.getRuntime().exec(PropertyUtil.getProperty("upload_file_path"));
 			WaitUtil.simpleWait(2);
 			uploadFileBtn.click();
+			WaitUtil.waitForElementToBeClickable(driver, 30, saveChangesBtn);
 			WaitUtil.simpleWait(2);
 			
 			titleField.sendKeys(PropertyUtil.getProperty("test_title"));
