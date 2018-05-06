@@ -34,8 +34,10 @@ public class TC002_VerifyManageCarouselHavingCorrespondingElements {
 		    System.out.println("Executing: "+method.getName());
 		    driver=GetDriver.init(PropertyUtil.getProperty("browser"), PropertyUtil.getProperty("url"));
 		    login=new Login(driver);
-			login.loginToApplication(PropertyUtil.getProperty("username"), PropertyUtil.getProperty("password"));
-			WaitUtil.simpleWait(5);
+		    login.loginToApplication(PropertyUtil.getProperty("username"), PropertyUtil.getProperty("password"));
+		    WaitUtil.simpleWait(5);
+		    home=new Home(driver);
+		    home.clickOnManageCarousel();
 		    
 	  }
 	
@@ -43,9 +45,7 @@ public class TC002_VerifyManageCarouselHavingCorrespondingElements {
 	
 	 @Test
 	  public void VerifyAllCarouselRecordsHavingCorrespondingEditDeleteBtn() throws InterruptedException{ 
-
-		  home=new Home(driver);
-		  home.clickOnManageCarousel();
+		  
 		  mc=new ManageCarousel(driver);
 		  int Tot_Carousel=mc.getAllCarousel();
 		  System.out.println("Total Carousels avaialable: "+Tot_Carousel);
@@ -63,8 +63,6 @@ public class TC002_VerifyManageCarouselHavingCorrespondingElements {
 	 @Test
 	 public void VerifyAddCarouselLinkButtonExist() throws InterruptedException{
 		  
-		 home=new Home(driver);
-		 home.clickOnManageCarousel();
 		 mc=new ManageCarousel(driver);
 		 Assert.assertEquals(mc.isAddCarouselLinkButtonExist(), true, "Either Add carousel link button doesn't exist/didn't load, Failing Test!");
 		 System.out.print("Add Carousel Link Button is available to add new carousel, Passing Test!");
