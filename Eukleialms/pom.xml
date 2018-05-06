@@ -51,15 +51,17 @@
 	    <configuration>
 	      <filesets>
 	        <fileset>
-	          <directory>Eukleialms/screenshots/</directory>
-	           <directory>Eukleialms/allure-results/</directory>
-		   <directory>allure-report/</directory>
-	         <includes>
-	            <include>**/*.*</include>
-	            <include>**/*.*</include>
+	          <directory>screenshots</directory>
+	           <directory>allure-results</directory>
+	         <!--  <includes>
+	            <include>**/*.tmp</include>
+	            <include>**/*.log</include>
 	          </includes>
-	          
-	          <followSymlinks>false</followSymlinks>
+	          <excludes>
+	            <exclude>**/important.log</exclude>
+	            <exclude>**/another-important.log</exclude>
+	          </excludes>
+	          <followSymlinks>false</followSymlinks> -->
 	        </fileset>
 	      </filesets>
 	    </configuration>
