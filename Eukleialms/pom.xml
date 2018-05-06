@@ -51,8 +51,8 @@
 	    <configuration>
 	      <filesets>
 	        <fileset>
-	          <directory>screenshots/</directory>
-	           <directory>allure-results/</directory>
+	          <directory>Eukleialms/screenshots/</directory>
+	           <directory>Eukleialms/allure-results/</directory>
 		   <directory>allure-report/</directory>
 	         <includes>
 	            <include>**/*.*</include>
