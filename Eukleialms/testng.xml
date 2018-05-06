@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Eukleialms" preserve-order="true">
-   <!--<test name="Homepage">
+   <test name="Homepage">
   	<classes >
   		<class name="tests.TC001_VerifyImagesForDefaultCarouselBlock"></class>
   	</classes>
@@ -17,10 +17,10 @@
   		<class name="tests.TC004_VerifyAddEditCarouselElements"></class>
   		<class name="tests.TC005_VerifyAddEditDeleteCarouselFeature"></class>
   	</classes>
-  	</test> -->
-   <test name="Sample configuration test">
+  	</test> 
+   <!--<test name="Sample configuration test">
   	<classes >
   		<class name="tests.sample"></class>
   	</classes>
-  	</test> 
+  	</test> -->
 </suite> <!-- Suite -->
