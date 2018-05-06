@@ -86,21 +86,21 @@ public class Home {
 		
 		public void clickOnManageCarousel() throws InterruptedException {
 			
-			if(isCarouselEmpty()){
+			/*if(isCarouselEmpty()){
 				
 				driver.get("https://leotest.eukleialms.com/blocks/carousel/");
 			}
-			else{
+			else{*/
 				
 				manageCarouselLink.click();
 				WaitUtil.simpleWait(5);
 				
-			}
+			//}
 			
 		}
 		
-		public boolean isCarouselEmpty(){
+		/*public boolean isCarouselEmpty(){
 			
 			return emptyCarouselTxt.isDisplayed();
-		}
+		}*/
 }
