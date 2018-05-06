@@ -20,7 +20,7 @@ import commonutil.WaitUtil;
 import pages.Home;
 import pages.Login;
 
-public class TC001_VerifyImagesForDefaultCarouselBlock {
+public class sample {
 	
 	
 	public static WebDriver driver;
@@ -30,7 +30,7 @@ public class TC001_VerifyImagesForDefaultCarouselBlock {
 	@BeforeMethod
 	  public void beforeMethod(Method method) throws Exception {
 		  
-		   Assert.assertTrue(true,true);
+		   Assert.assertTrue(true);
 	  }
 	
 	
@@ -38,7 +38,7 @@ public class TC001_VerifyImagesForDefaultCarouselBlock {
 	 @Test
 	  public void VerifyAllCarouselImagesAreVisibleForDefaultCarousel() throws InterruptedException{ 
 		  
-		  Assert.assertTrue(true,true);
+		  Assert.assertTrue(true);
 		  
 	  }
 	
@@ -65,4 +65,4 @@ public class TC001_VerifyImagesForDefaultCarouselBlock {
 			driver.quit();
 			
 		}
-	
+}
