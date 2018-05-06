@@ -55,7 +55,7 @@ public class TC005_VerifyAddEditDeleteCarouselFeature {
 		  
 		  anc.setCarouselName(PropertyUtil.getProperty("test_carousel"));
 		  anc.clickOnAddItemButton();
-		  WaitUtil.simpleWait(3);
+		  anc.waitForAttachmentElmtToBeClickable();
 		  anc.fillDataForAddItem();
 		  
 		  Assert.assertEquals(
