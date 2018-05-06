@@ -51,8 +51,9 @@
 	    <configuration>
 	      <filesets>
 	        <fileset>
-	          <directory>screenshots</directory>
-	           <directory>allure-results</directory>
+	          <directory>screenshots/</directory>
+	           <directory>allure-results/</directory>
+		   <directory>allure-report/</directory>
 	         <!--  <includes>
 	            <include>**/*.tmp</include>
 	            <include>**/*.log</include>
