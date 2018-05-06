@@ -43,7 +43,7 @@ public class sample {
 	  }
 	
  
-	@AfterMethod
+	/*@AfterMethod
 	  public void afterMethod(ITestResult result) {
 		  
 		  if(ITestResult.FAILURE==result.getStatus()){
@@ -64,5 +64,5 @@ public class sample {
 		}
 			driver.quit();
 			
-		}
+		}*/
 }
