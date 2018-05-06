@@ -32,9 +32,13 @@ public class AddEditCarousel {
 		@FindBy(id="id_option_add_fields")
 		WebElement addItemToggleBtn;
 		
-		//for specific to editing existing carousel
+		//for specific to editing carousel
 		@FindBy(xpath="//legend//a[contains(text(),'New item')]")
 		WebElement newItemAfterClkAddItem;
+		
+		//for specific to editing carousel
+		@FindBy(xpath="//*[contains(@class,'filemanager fm-loaded fm-nomkdir fm-nofiles fm-noitems')]/div[2]/div[1]/div[1]/div[1]/a")
+		WebElement attachmentWhileEditing;
 		
 		@FindBy(xpath="//div[@class='fp-btn-add']/a")
 		WebElement addAttachment;
@@ -103,6 +107,11 @@ public class AddEditCarousel {
 			WaitUtil.waitForElementToBeClickable(driver, 30, addAttachment);
 		}
 		
+		public void waitForAttachmentElmtToBeClickableForEditing(){
+			
+			WaitUtil.waitForElementToBeClickable(driver, 30, attachmentWhileEditing);
+		}
+		
 		public void newItemAfterClkAddItemElmtToBeClickable(){
 			
 			WaitUtil.waitForElementToBeClickable(driver, 30, newItemAfterClkAddItem);
@@ -112,7 +121,7 @@ public class AddEditCarousel {
 			
 			newItemAfterClkAddItemElmtToBeClickable();
 			newItemAfterClkAddItem.click();
-			waitForAttachmentElmtToBeClickable();
+			waitForAttachmentElmtToBeClickableForEditing();
 		}
 		
 		
