@@ -36,8 +36,10 @@ public class TC003_VerifyAddNewCarouselAndHavingRequiredElements {
 		    System.out.println("Executing: "+method.getName());
 		    driver=GetDriver.init(PropertyUtil.getProperty("browser"), PropertyUtil.getProperty("url"));
 		    login=new Login(driver);
-			login.loginToApplication(PropertyUtil.getProperty("username"), PropertyUtil.getProperty("password"));
-			WaitUtil.simpleWait(5);
+		    login.loginToApplication(PropertyUtil.getProperty("username"), PropertyUtil.getProperty("password"));
+		    WaitUtil.simpleWait(5);
+		    home=new Home(driver);
+		    home.clickOnManageCarousel();
 		    
 	  }
 	
@@ -46,8 +48,6 @@ public class TC003_VerifyAddNewCarouselAndHavingRequiredElements {
 	 @Test(priority=0)
 	  public void VerifyAbleToRouteToAddNewCarouselHavingSomeFields() throws InterruptedException{ 
 
-		  home=new Home(driver);
-		  home.clickOnManageCarousel();
 		  mc=new ManageCarousel(driver);
 		  mc.clickOnaddCarouselLink();
 		  anc=new AddEditCarousel(driver);
