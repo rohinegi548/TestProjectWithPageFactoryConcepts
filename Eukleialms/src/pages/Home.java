@@ -24,6 +24,9 @@ public class Home {
 		@FindBy(xpath="//*[@class='footer']/a")
 		WebElement manageCarouselLink;
 		
+		@FindBy(xpath="//div[text()='Your carousel is empty']")
+		WebElement emptyCarouselTxt;
+		
 		@FindBy(xpath="//*[@style='background-image: url(https://leotest.eukleialms.com/pluginfile.php/1/block_carousel/image_2_2/CAROUSEL_1920x1080_Step1.jpg)']")
 		WebElement carousel_1;
 		
@@ -83,7 +86,21 @@ public class Home {
 		
 		public void clickOnManageCarousel() throws InterruptedException {
 			
-			manageCarouselLink.click();
-			WaitUtil.simpleWait(5);
+			if(isCarouselEmpty()){
+				
+				driver.get("https://leotest.eukleialms.com/blocks/carousel/");
+			}
+			else{
+				
+				manageCarouselLink.click();
+				WaitUtil.simpleWait(5);
+				
+			}
+			
+		}
+		
+		public boolean isCarouselEmpty(){
+			
+			return emptyCarouselTxt.isDisplayed();
 		}
 }
